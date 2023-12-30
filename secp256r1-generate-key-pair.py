@@ -8,6 +8,9 @@ console = Console()
 key = ECC.generate(curve="secp256r1")
 pubkey = key.public_key()
 
+print(Panel("prikey.pem", box=box.SQUARE))
+print(key.export_key(format="PEM"))
+
 print(Panel("pubkey.pem", box=box.SQUARE))
 print(pubkey.export_key(format="PEM"))
 
